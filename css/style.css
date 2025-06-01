@@ -34,3 +34,17 @@ h1 {
 header .col-md-6 {
   animation: fadeInUp 1s ease-out;
 }
+/*about*/
+#about {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+}
+
+#about h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.1rem;
+}
