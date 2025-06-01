@@ -1,30 +1,29 @@
-// js/script.js
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Animation apparition au scroll
+    function reveal() {
+      const cards = document.querySelectorAll('.project-card');
+      const windowHeight = window.innerHeight;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < windowHeight - 100) {
+          card.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
 
-const projets = [
-  {
-    titre: "Site de voyage",
-    description: "Un site responsive pour une agence de voyages",
-    lien: "#",
-  },
-  {
-    titre: "App météo",
-    description: "Application JS qui affiche la météo d'une ville",
-    lien: "#",
-  },
-];
-
-const container = document.getElementById("project-list");
-
-projets.forEach((projet) => {
-  container.innerHTML += `
-    <div class="col-md-6 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">${projet.titre}</h5>
-          <p class="card-text">${projet.description}</p>
-          <a href="${projet.lien}" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-        </div>
-      </div>
-    </div>
-  `;
-});
+    // Bouton retour en haut
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
