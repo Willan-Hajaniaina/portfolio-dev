@@ -1,79 +1,36 @@
+/* Custom styles ici */
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+/*hero section*/
+header {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+}
 
-    body {
-      scroll-behavior: smooth;
-      background: #f8f9fa;
-    }
-    header {
-      height: 100vh;
-      background: linear-gradient(135deg, #6f42c1 0%, #d63384 100%);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      animation: fadeInDown 1s ease forwards;
-    }
-    header p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.5s;
-    }
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    section {
-      padding: 4rem 1rem;
-    }
-    .project-card {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.5s ease;
-    }
-    .project-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #backToTop {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      display: none;
-      background: #6f42c1;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 1000;
-    }
-    nav.navbar {
-      background: white;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-    }
- 
+h1 {
+  color: #222;
+}
+
+.btn-primary {
+  background-color: #5c62ec;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #444ad9;
+}
+/*animation fade in*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header .col-md-6 {
+  animation: fadeInUp 1s ease-out;
+}
