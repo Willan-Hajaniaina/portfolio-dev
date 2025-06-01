@@ -1,0 +1,8 @@
+/* css/style.css */
+body {
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
